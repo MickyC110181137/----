@@ -1,0 +1,244 @@
+:root{
+    --color-Black:#000000;
+    --color-Blue: #14213d;
+    --color-Orange:#fca311;
+    --color-white1:#e5e5e5;
+    --color-white:#ffffff;
+}
+
+body{
+    overflow-x: hidden;
+}
+#icon{
+    z-index: 1 !important;
+}
+.img-cover{
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.layer{
+    background: url(./IMG/BG.JPG),var(--color-Blue);
+    height: 150vh;
+    width: 3000px;
+    margin-top: -200px;
+    margin-left: -200px;
+    background-blend-mode: soft-light;
+    z-index: 1 !important;
+}
+nav{
+    position: absolute;
+    z-index: 10 !important;
+}
+
+.main{
+  min-height: 90vh;
+  width:100%;
+  position: absolute;
+  z-index: 2!important;
+  color: #e5e5e5;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.footer{
+    background-color: var(--color-Blue);
+    width: 100vw;
+    height:90px;
+    position: relative;
+    z-index: 2;
+}
+
+/*-------------------me-------------------------*/
+.Me{
+    display: flex;
+}
+
+.LeftMe{
+    min-height: 100vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    background:#457b9d;
+    opacity: 0.8;
+}
+.Me-ImgBox{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.Me-Img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+.Me-Title{
+    text-align: center;
+    color: #14213d;
+}
+
+.Me-Title h1{
+    font-weight: bold;
+}
+
+.Me-Information-box{
+    width: 80%;
+    background: #1d3557;
+    margin: 10%;
+    color: #ffffff;
+    font-size:larger;
+    line-height:40px;
+    opacity: 1;
+    border-radius: 30px;
+}
+.Me-Information li{
+    margin-left: 30px;
+    list-style: none;
+}
+
+.RightMe{
+    min-height: 100vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.Me-Like{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white1);
+}
+.Me-Like h1{
+    font-weight: bold;
+}
+
+
+/*box*/
+.Me-LikeBox{
+    position: relative;
+}
+
+.Me-LikeBox .box{
+    float: left;
+    position: relative;
+    width: 250px;
+    height: 210px;
+    margin: 50px;
+    margin-left: 80px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+
+.Me-LikeBox .box .videoBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Me-LikeBox .box .videoBox video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Me-LikeBox .box .videoBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: var(--color-Blue) solid 2px;
+    border-radius: 20px;
+}
+
+.Me-LikeBox .box .textBox{
+    position: absolute;
+    top: 40px;
+    bottom: 40px;
+    right: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1bb068;
+    transition: transform 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+    opacity: 0.9;
+}
+
+.Me-LikeBox .box:hover .textBox{
+    transition: transform 0.5s;
+    transform-origin: left;
+    transform: scaleX(1);    
+}
+
+.Me-LikeBox .box .textBox .context{
+    position: relative;
+    padding: 10px 60px;
+    opacity: 0;
+}
+
+.Me-LikeBox .box:hover .textBox .context{
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+
+.Me-LikeBox .box .textBox .context h2{
+    color:#fff;
+    font-weight: 500;
+    font-size: 15px;
+    margin-left: -50px;
+    margin-bottom: 10px; 
+}
+
+.Me-LikeBox .box .textBox .context p{
+    color:#fff;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px; 
+}
+
+
+/*========= MeDIA QUERIES (MEDIUM DEVICES) ============*/
+@media screen and (max-width: 1024px) {
+    .layer{
+        height: 250vh;
+    }
+    .img-cover{
+        height: 200vh;
+      }
+    .LeftMe{
+        width: 50%;
+    }
+    .RightMe{
+        width: 50%;
+    }
+}
+
+/*========= MeDIA QUERIES (SMALL DEVICES) ============*/
+@media screen and (max-width: 600px) {
+    .Me{
+        flex-direction: column;
+    }
+    .LeftMe{
+        width: 100%;
+    }
+    .RightMe{
+        width: 100%;
+        background-color: var(--color-Blue);
+    }
+}
