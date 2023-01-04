@@ -7,26 +7,26 @@
 }
 
 body{
-    overflow: hidden;
-    height: 100vh !important;
-    width: 100vw !important;
+    overflow-x: hidden;
 }
 #icon{
     z-index: 1 !important;
-    width: 100vw;
-    height: 100vh;
+}
+.img-cover{
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
 }
 .layer{
-    background: var(--color-Blue);
-    background-size: 80%;
-    height: 150vh;
-    width: 3333px;
+    background: url(./IMG/BG.JPG),var(--color-Blue);
+    min-height: 120vh;
+    width: 3000px;
     margin-top: -200px;
     margin-left: -200px;
-    position: absolute;
     background-blend-mode: soft-light;
     z-index: 1 !important;
-    object-fit: cover;
 }
 nav{
     position: absolute;
@@ -34,22 +34,83 @@ nav{
 }
 
 .main{
-    height: 90vh;
-    width:100%;
-    position: absolute;
-    z-index: 2!important;
-    color: #e5e5e5;
-    margin: 0;
-    padding: 0;
+  min-height: 90vh;
+  width:100%;
+  position: absolute;
+  z-index: 2!important;
+  color: #e5e5e5;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.project{
+  display: flex;
+  flex-direction:column;
+  width: 730px;
+  background-color: var(--color-Orange);
+  border: var(--color-Orange) solid 5px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.project > p{
+  color: var(--color-Blue);
+
 }
 .flex-project{
-  position: absolute;
   display: flex;
-  height: 100vh;
-  width: 100%;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-content:space-around;
+}
+.Project-card{
+  height: 200px;
+  width:300px;
+  float: left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 30px;
+}
+.Project-card:hover{
+  border: var(--color-white) solid 3px;
+}
+
+.Card-img{
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+}
+.TextBox{
+  height: 20%;
+  text-align: center;
+  background-color: var(--color-Blue);
+  color: var(--color-white1);
+}
+.TextBox p{
+  position: relative;  
+  margin-bottom:0px;
+}
+
+/*========= MeDIA QUERIES (MEDIUM DEVICES) ============*/
+@media screen and (max-width: 1024px) {
+  .project{
+    margin-top: 100px;
+    width: 600px;
+  }
+  .Project-card{
+    height: 140px;
+    width:220px;
+  }
+
+  
+}
+
+/*========= MeDIA QUERIES (SMALL DEVICES) ============*/
+@media screen and (max-width: 600px) {
+  .project{
+    margin-top: 50px;
+    width: 280px;
+  }
+  .img-cover{
+    height:120vh;
+  }
 }
 
 /*----------------------home js----------------------*/
