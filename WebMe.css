@@ -14,19 +14,21 @@ body{
 }
 .img-cover{
   display: flex;
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+
+  overflow: hidden;
 }
 .layer{
     background: url(./IMG/BG.JPG),var(--color-Blue);
-    height: 150vh;
+    height: 1500px;
     width: 3000px;
     margin-top: -200px;
     margin-left: -200px;
     background-blend-mode: soft-light;
     z-index: 1 !important;
+    object-fit: cover;
 }
 nav{
     position: absolute;
@@ -214,12 +216,17 @@ nav{
 
 
 /*========= MeDIA QUERIES (MEDIUM DEVICES) ============*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1410px) {
+    .img-cover{
+        height: 1050px;
+    }
+}
+@media screen and (max-width: 1100px) {
     .layer{
         height: 250vh;
     }
     .img-cover{
-        height: 200vh;
+        height: 100%;
       }
     .LeftMe{
         width: 50%;
